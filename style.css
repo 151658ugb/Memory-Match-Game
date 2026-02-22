@@ -4,12 +4,13 @@
 }
 
 body {
-  margin: 0;
-  min-height: 100vh;
-  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  padding: 30px;   /* 👈 ต้องมี */
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
   color: #fff;
 }
 
@@ -36,6 +37,12 @@ p {
   gap: 15px;
   justify-content: center;
 }
+@media (min-width: 1080px) {
+    .level-buttons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 
 button {
   padding: 14px 28px;
@@ -59,9 +66,14 @@ button:active {
 
 /* ----- Memory Game Styles ----- */
 
+.menu-container,
 .game-container {
-  text-align: center;
+  width: min(900px, 92%);
+  margin: 40px auto;
+  padding: 30px;
+  box-sizing: border-box;
 }
+
 
 .top-bar {
   display: flex;
