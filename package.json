@@ -8,3 +8,9 @@
     "serve": "^14.0.0"
   }
 }
+
+{
+  "scripts": {
+    "start": "npx serve -s ."
+  }
+}
