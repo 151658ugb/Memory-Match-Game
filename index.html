@@ -2,35 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Memory Match - Start</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Match</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
+  <div class="container game-container">
     <h1>🧠 Memory Match</h1>
-    <p>Select a Level</p>
 
-    <div class="level-buttons">
-      <button data-level="1">Lv.1 (6 Cards)</button>
-      <button data-level="2">Lv.2 (8 Cards)</button>
-      <button data-level="3">Lv.3 (10 Cards)</button>
-      <button data-level="4">Lv.4 (12 Cards)</button>
-      <button data-level="5">Lv.5 (14 Cards)</button>
+    <div class="top-bar">
+      <div class="status" id="status"></div>
+      <div class="timer" id="timer"></div>
+    </div>
+
+    <div class="grid" id="grid"></div>
+
+    <div class="controls">
+      <button class="retry-btn" id="retryBtn">Retry</button>
+      <button class="back-btn" id="backBtn">Back to Menu</button>
     </div>
   </div>
 
-  <script >
-    const levelButtons = document.querySelectorAll(".level-buttons button");
-
-levelButtons.forEach(btn => {
-  btn.addEventListener("click", () => {
-    const level = btn.getAttribute("data-level");
-    window.location.href = `memory-game.html?level=${level}`;
-  });
-});
-  </script>
+  <script src="memory-game.js"></script>
 </body>
 </html>
-
-
-
